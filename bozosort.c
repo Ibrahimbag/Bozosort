@@ -3,12 +3,12 @@
 #include <stdbool.h>
 #include <time.h>
 
-int arr[] = {8, 1, 3, 5, 2, 11, 12, 4, 6, 7, 0, 9, 10};
+int arr[] = {8, 1, 3, 5, 2, 4, 6, 7, 0, 9, 10};
 const int m = sizeof(arr) / sizeof(int); 
 long counter = 0;
 
 bool issorted();
-void sort();
+void swap();
 int randomnum(int lower, int upper);
 
 int main(void)
@@ -31,7 +31,7 @@ int main(void)
 	// Loop until it figures out how to sort array
 	while (!issorted(arr))
 	{
-		sort();
+		swap();
 	}
 
 	// If sorting is finished, stop the timer and do calculation to get the CPU time
@@ -67,7 +67,7 @@ bool issorted()
 	return true;
 }
 
-void sort()
+void swap()
 {
 	// Some temporary variables and minimun, maximun variable for random() 
 	int temp, buffer, buffer2, lower = 0, upper = m;
