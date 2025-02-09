@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 
 	// Sort the array using bozosort and print the result
-	int swap_count = bozosort(arr, arr_size);
+	int swap_count = bozosort(arr, arr_size, ASCENDING);
 	for (int i = 0; i < arr_size; i++)
 	{
 		printf("%d ", arr[i]);

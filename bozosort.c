@@ -3,11 +3,15 @@
 #include <stdlib.h>
 #include <time.h>
 
-static bool is_sorted(int arr[], int arr_size)
+static bool is_sorted(int arr[], int arr_size, int order)
 {
 	for (int i = 1; i < arr_size; i++)
 	{
-		if (arr[i - 1] > arr[i])
+		if (order == ASCENDING && arr[i - 1] > arr[i])
+		{
+			return false;
+		}
+		else if (order == DESCENDING && arr[i - 1] < arr[i])
 		{
 			return false;
 		}
@@ -37,12 +41,12 @@ static void swap(int arr[], int arr_size)
 	arr[index2] = temp;
 }
 
-int bozosort(int arr[], int arr_size)
+int bozosort(int arr[], int arr_size, int order)
 {
 	srand((unsigned int) time(NULL));
 
 	int swap_count = 0;
-	while (!is_sorted(arr, arr_size))
+	while (!is_sorted(arr, arr_size, order))
 	{
 		swap(arr, arr_size);
 		swap_count++;

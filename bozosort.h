@@ -1,6 +1,9 @@
 #ifndef BOZOSORT_H
 #define BOZOSORT_H
 
-int bozosort(int arr[], int arr_size);
+#define ASCENDING 1
+#define DESCENDING 0
+
+int bozosort(int arr[], int arr_size, int order);
 
 #endif
