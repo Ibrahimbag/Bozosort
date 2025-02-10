@@ -43,6 +43,11 @@ static void swap(int arr[], int arr_size)
 
 int bozosort(int arr[], int arr_size, int order)
 {
+	if (order != ASCENDING && order != DESCENDING)
+	{
+		return -1;
+	}
+	
 	srand((unsigned int) time(NULL));
 
 	int swap_count = 0;
