@@ -1,5 +1,5 @@
 # Bozosort
-Bozosort is a random [sorting algorithm](https://www.javatpoint.com/sorting-algorithms); it's a combination of [Bogosort](https://en.wikipedia.org/wiki/Bogosort) and [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort).
+Bozosort is a random [sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm); it's a combination of [Bogosort](https://en.wikipedia.org/wiki/Bogosort) and [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort).
 
 This algorithm is designed to sort an array by swapping two elements randomly until the array is sorted, whereas [Bogosort](https://en.wikipedia.org/wiki/Bogosort) shuffles the whole array randomly in each swap.
 
