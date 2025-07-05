@@ -1,9 +1,11 @@
 #ifndef BOZOSORT_H
 #define BOZOSORT_H
 
-#define ASCENDING 1
-#define DESCENDING 0
+enum sort_order {
+    ASCENDING,
+    DESCENDING
+};
 
-int bozosort(int arr[], int arr_size, int order);
+int bozosort(int arr[], int arr_size, enum sort_order order);
 
 #endif

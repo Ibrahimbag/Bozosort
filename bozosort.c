@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-static bool is_sorted(int arr[], int arr_size, int order)
+static bool is_sorted(int arr[], int arr_size, enum sort_order order)
 {
 	for (int i = 1; i < arr_size; i++)
 	{
@@ -41,7 +41,7 @@ static void swap(int arr[], int arr_size)
 	arr[index2] = temp;
 }
 
-int bozosort(int arr[], int arr_size, int order)
+int bozosort(int arr[], int arr_size, enum sort_order order)
 {
 	if (order != ASCENDING && order != DESCENDING)
 	{

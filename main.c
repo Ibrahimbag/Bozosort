@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 	}
 
 	// Get user input if they want their array sorted in ascending or descending order
-	int order;
-	printf("Enter 1 for ascending order or 0 for descending order: \n");
+	enum sort_order order;
+	printf("Enter 0 for ascending order or 1 for descending order: \n");
 	do
 	{
-		scanf("%d", &order);
-	} while (order != 0 && order != 1);
+		scanf("%d", (int *) &order);
+	} while (order != ASCENDING && order != DESCENDING);
 
 	// Sort the array using bozosort and print the result
 	int swap_count = bozosort(arr, arr_size, order);
